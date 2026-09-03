@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* =========================
+   LIGHT THEME
+========================= */
+
+:root {
+     --color-primary: #0A0F16;
+  --color-secondary: #5B6B7D;
+
+  --color-background: #FFFFFF;
+  --color-background-secondary: #EEF2F6;
+
+  --color-button: #0F9D7C;
+
+  --color-border: #C7D0DA;
+}
+
+/* =========================
+   DARK THEME
+========================= */
+
+.dark {
+  --color-primary: #E6EDF3;
+  --color-secondary: #B6C4D3;
+
+  --color-background: #0A0F16;
+  --color-background-secondary: #0E141D;
+
+  --color-button: #2DD4A7;
+
+  --color-border: #1A212C;
+}
+
+/* =========================
+   TAILWIND TOKENS
+========================= */
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-background: var(--color-background);
+  --color-background-secondary: var(--color-background-secondary);
+  --color-button: var(--color-button);
+  --color-border: var(--color-border);
+
+  --font-main: "Inter", sans-serif;
+}
