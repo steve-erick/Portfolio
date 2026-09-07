@@ -65,7 +65,7 @@ export const profile = {
           'A financial management application built around modular dashboard blocks for tracking expenses, organizing finances, and visualizing spending.',
         tags: ['Vue', 'JavaScript', 'Finance'],
         href: '#',
-        image: '/images/Saveit.png',
+        image: '/images/SaveIt.png',
         text: 'View Project',
       },
       {
