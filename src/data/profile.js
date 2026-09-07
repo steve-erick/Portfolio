@@ -220,7 +220,7 @@ export const profile = {
           'Uma aplicação de gestão financeira organizada em blocos modulares, criada para acompanhar despesas, organizar as finanças e visualizar de forma clara os hábitos de consumo.',
         tags: ['Vue', 'JavaScript', 'Finanças'],
         href: '#',
-        image: '/images/Saveit.png',
+        image: '/images/SaveIt.png',
         text: 'Ver Projeto',
       },
       {
