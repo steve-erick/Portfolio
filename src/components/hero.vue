@@ -14,7 +14,7 @@ defineProps({
 
         <img
             class="w-2/3 md:w-2/6"
-            src="../assets/logo.png"
+            src="/images/logo.png"
             alt="Logo"
         />
 
