@@ -17,7 +17,7 @@ defineProps({
     :whileInView="{ opacity: 1, y: 0 }"
     :transition="{ duration: 0.6 }"
     :viewport="{ once: true, amount: 0.1}"  
-    class="flex flex-col gap-6 items-center">
+    class="flex flex-col gap-6 items-center" id="work">
 
         <!-- Header -->
         <div class="flex flex-col gap-3 max-w-3xl">
@@ -58,7 +58,7 @@ defineProps({
                 <div class="w-1/2 overflow-hidden rounded-xl border border-border shadow-[0_2px_16px_-4px_rgba(15,23,32,0.15)]">
                     <img
                         :src="featuredProject.image"
-                        class="w-full aspect-video object-cover"
+                        class="w-full aspect-video object-fit "
                         alt="BattleDev"
                     >
 

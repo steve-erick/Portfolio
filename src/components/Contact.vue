@@ -13,7 +13,7 @@ defineProps({
   <section id="contact" class="py-[88px]">
     <div
       class="w-[90vw] mx-auto flex flex-col min-[720px]:flex-row
-             items-start min-[720px]:items-center
+             items-center min-[720px]:items-center
              justify-between gap-10"
     >
 
@@ -36,7 +36,7 @@ defineProps({
 
       <!-- Actions -->
       <div
-        class="flex flex-col items-start min-[720px]:items-end
+        class="flex flex-col items-start min-[720px]:items-center 
                gap-[18px] flex-shrink-0
                w-full min-[720px]:w-auto"
       >
