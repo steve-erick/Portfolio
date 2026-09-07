@@ -33,7 +33,8 @@ defineProps({
             </a>
 
             <a
-                href="#work"
+                :href="hero.secondaryCta.href"
+                :download="hero.secondaryCta.href"
                 class="inline-flex items-center gap-2 rounded-2xl px-6 py-3 outline text-primary font-medium transition-colors hover:bg-emerald-300"
             >
                 <Download />

@@ -14,7 +14,7 @@ export const profile = {
       description:
         'I build fast, accessible interfaces for products people use every day — from data-heavy dashboards to storefronts that load on a bad connection. Six years in, mostly React and TypeScript.',
       primaryCta: { label: 'See selected work', href: '#work' },
-      secondaryCta: { label: 'Download CV', href: '/cv-erick-castro.pdf' },
+      secondaryCta: { label: 'Download CV', href: '/Curriculo_EN.pdf' },
       location: 'Fortaleza, BR — remote friendly',
       socials: [
         { label: 'GitHub', href: 'https://github.com/steve-erick', icon: 'github' },
@@ -169,7 +169,7 @@ export const profile = {
       description:
         'Eu crio interfaces rápidas e acessíveis para produtos que as pessoas usam todos os dias — desde painéis com grande volume de dados até lojas virtuais que carregam mesmo com conexões ruins. Seis anos de experiência, principalmente com React e TypeScript.',
       primaryCta: { label: 'Ver trabalhos selecionados', href: '#work' },
-      secondaryCta: { label: 'Baixar CV', href: '/cv-erick-castro.pdf' },
+      secondaryCta: { label: 'Baixar CV', href: '/Curriculo_BR.pdf' },
       location: 'Fortaleza, BR — trabalho remoto',
       socials: [
         { label: 'GitHub', href: 'https://github.com/steve-erick', icon: 'github' },
