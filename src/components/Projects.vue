@@ -96,7 +96,7 @@ defineProps({
                     <div class="flex gap-3 mt-6">
 
                         <a
-                            href="#"
+                            :href="featuredProject.caseStudyHref"
                             class="inline-flex items-center gap-2
                                    rounded-2xl bg-button
                                    px-6 py-3 font-medium
@@ -111,7 +111,7 @@ defineProps({
                         </a>
 
                         <a
-                            href="#"
+                            :href="featuredProject.sourceHref"
                             class="inline-flex items-center justify-center gap-2
                                    rounded-2xl px-6 py-3
                                    border border-border

@@ -39,34 +39,36 @@ export const profile = {
         'A programming challenge platform designed to make coding competitions more dynamic and engaging. I developed the interface, structured the challenge experience, and worked on the application architecture to keep navigation fast, intuitive, and responsive.',
       metric: 'Optimized experience for programming challenges and competitive events',
       role: 'Full Stack Developer',
-      stack: ['Vue', 'JavaScript', 'Flask', 'SQLite'],
+      stack: ['Vue', 'JavaScript', 'Flask', 'SQLite','GraphQL'],
       ctprimary: 'View project',
       ctsecondary: 'Code',
-      caseStudyHref: '#',
-      sourceHref: '#',
+      caseStudyHref: 'https://github.com/steve-erick/BattleDev',
+      sourceHref: 'https://github.com/steve-erick/BattleDev',
       image: '/images/BattleDev.png',
     },
 
     projects: [
       {
-        title: 'Comunidade Resolve',
+        title: 'CityFix',
         year: '2025',
         description:
-          'Documentation platform with versioned content, instant search, and runnable code samples.',
-        tags: ['Vue', 'Rust', 'MDX'],
+  'A collaborative platform for reporting urban issues such as potholes, poor street lighting, and illegal dumping. Users can submit photos and locations, while an interactive map organizes reports to help local authorities and the community track and resolve them.',
+     tags: ['React Native', 'Expo', 'MySql'],
         href: '#',
         image: '/images/comunidade.jpeg',
         text: 'View Project',
+        href: 'https://github.com/steve-erick/Comunidade_Resolve'
       },
       {
         title: 'SaveIt',
         year: '2025',
         description:
           'A financial management application built around modular dashboard blocks for tracking expenses, organizing finances, and visualizing spending.',
-        tags: ['Vue', 'JavaScript', 'Finance'],
+        tags: ['Angular', 'Java', 'Mysql'],
         href: '#',
         image: '/images/SaveIt.png',
         text: 'View Project',
+        href: 'https://github.com/steve-erick/SaveIt'
       },
       {
         title: 'House of Robotic',
@@ -77,6 +79,7 @@ export const profile = {
         href: '#',
         image: '/images/Houseofrobotic.png',
         text: 'View Project',
+        href: 'https://github.com/steve-erick/CasaDaRobotica'
       },
     ],
 
@@ -194,34 +197,34 @@ export const profile = {
         'Uma plataforma de desafios de programação criada para transformar competições de desenvolvimento em uma experiência mais dinâmica e prática. Desenvolvi a interface, organizei a experiência dos desafios e trabalhei na estrutura da aplicação para tornar a navegação simples, rápida e responsiva.',
       metric: 'Experiência otimizada para desafios de programação e competições em tempo real',
       role: 'Desenvolvedor Full Stack',
-      stack: ['Vue', 'JavaScript', 'Flask', 'SQLite'],
+      stack: ['Vue', 'JavaScript', 'Flask', 'SQLite','GraphQL'],
       ctprimary: 'Ver projeto',
       ctsecondary: 'Código',
-      caseStudyHref: '#',
-      sourceHref: '#',
+      caseStudyHref: 'https://github.com/steve-erick/BattleDev',
+      sourceHref: 'https://github.com/steve-erick/BattleDev',
       image: '/images/BattleDev.png',
     },
 
     projects: [
       {
-        title: 'Atlas Docs',
+        title: 'Comunidade Resolve',
         year: '2025',
         description:
-          'Plataforma de documentação com conteúdo versionado, busca instantânea e exemplos de código executáveis.',
-        tags: ['Vue', 'Rust', 'MDX'],
-        href: '#',
+  'Plataforma colaborativa para registrar problemas urbanos, como buracos, falta de iluminação e descarte irregular. Usuários podem enviar fotos e localização, enquanto um mapa interativo organiza as ocorrências para facilitar o acompanhamento pelas autoridades e pela comunidade.',
+      tags: ['React Native', 'Expo', 'MySql'],
         image: '/images/comunidade.jpeg',
         text: 'Ver Projeto',
+        href: 'https://github.com/steve-erick/Comunidade_Resolve'
       },
       {
         title: 'SaveIt',
         year: '2025',
         description:
           'Uma aplicação de gestão financeira organizada em blocos modulares, criada para acompanhar despesas, organizar as finanças e visualizar de forma clara os hábitos de consumo.',
-        tags: ['Vue', 'JavaScript', 'Finanças'],
-        href: '#',
+        tags: ['Angular', 'Java', 'Mysql'],
         image: '/images/SaveIt.png',
         text: 'Ver Projeto',
+        href: 'https://github.com/steve-erick/SaveIt'
       },
       {
         title: 'House of Robotic',
@@ -229,9 +232,9 @@ export const profile = {
         description:
           'Uma plataforma de e-commerce para componentes de robótica e eletrônica, com gerenciamento de produtos, busca, autenticação, carrinho de compras e processamento de pedidos.',
         tags: ['Vue', 'Flask', 'SQLite'],
-        href: '#',
         image: '/images/Houseofrobotic.png',
         text: 'Ver Projeto',
+        href: 'https://github.com/steve-erick/CasaDaRobotica'
       },
     ],
 

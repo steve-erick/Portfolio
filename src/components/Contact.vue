@@ -42,19 +42,14 @@ defineProps({
       >
 
         <!-- Email -->
-        <a
-          :href="`mailto:${contact.email}`"
-          class="inline-flex items-center gap-2
-                 bg-button text-background
-                 font-semibold text-[14.5px]
-                 px-5 py-3 rounded-lg
-                 whitespace-nowrap
-                 transition-colors
-                 hover:bg-button/80"
-        >
-          {{ contact.email }}
-        </a>
-
+      <a
+  :href="`https://mail.google.com/mail/?view=cm&fs=1&to=${contact.email}`"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="inline-flex items-center gap-2 bg-button text-background font-semibold text-[14.5px] px-5 py-3 rounded-lg whitespace-nowrap transition-colors hover:bg-button/80"
+>
+  {{ contact.email }}
+</a>
         <!-- Socials -->
         <div
           class="flex gap-5
