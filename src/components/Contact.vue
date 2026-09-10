@@ -10,25 +10,28 @@ defineProps({
 </script>
 
 <template>
-  <section id="contact" class="py-[88px]">
+  <section
+    id="contact"
+    class="w-full px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-[88px]"
+  >
     <div
-      class="w-[90vw] mx-auto flex flex-col min-[720px]:flex-row
-             items-center min-[720px]:items-center
-             justify-between gap-10"
+      class="mx-auto flex w-full max-w-7xl
+             flex-col items-center justify-between gap-10
+             md:flex-row md:items-center"
     >
-
       <!-- Text -->
-      <div>
+      <div class="w-full text-center md:max-w-[520px] md:text-left">
         <h2
-          class="text-primary text-[30px] font-medium
-                 max-w-[440px] mb-3"
+          class="mb-3 text-3xl font-medium
+                 leading-tight text-primary
+                 sm:text-4xl"
         >
           {{ contact.title }}
         </h2>
 
         <p
-          class="text-secondary text-[15px] leading-[1.6]
-                 max-w-[460px]"
+          class="text-sm leading-relaxed text-secondary
+                 sm:text-[15px]"
         >
           {{ contact.description }}
         </p>
@@ -36,39 +39,46 @@ defineProps({
 
       <!-- Actions -->
       <div
-        class="flex flex-col items-start min-[720px]:items-center 
-               gap-[18px] flex-shrink-0
-               w-full min-[720px]:w-auto"
+        class="flex w-full shrink-0 flex-col
+               items-center gap-5
+               md:w-auto md:items-end"
       >
-
         <!-- Email -->
-      <a
-  :href="`https://mail.google.com/mail/?view=cm&fs=1&to=${contact.email}`"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="inline-flex items-center gap-2 bg-button text-background font-semibold text-[14.5px] px-5 py-3 rounded-lg whitespace-nowrap transition-colors hover:bg-button/80"
->
-  {{ contact.email }}
-</a>
+        <a
+          :href="`mailto:${contact.email}`"
+          class="inline-flex w-full max-w-sm
+                 items-center justify-center
+                 break-all rounded-lg bg-button
+                 px-4 py-3 text-center text-sm
+                 font-semibold text-background
+                 transition-all duration-200
+                 hover:-translate-y-0.5 hover:bg-button/80
+                 sm:w-auto sm:px-5 sm:text-[14.5px]"
+        >
+          {{ contact.email }}
+        </a>
+
         <!-- Socials -->
         <div
-          class="flex gap-5
-                 text-secondary text-sm"
+          class="flex max-w-full flex-wrap
+                 items-center justify-center gap-x-5 gap-y-3
+                 text-sm text-secondary
+                 md:justify-end"
         >
           <a
-            v-for="s in contact.socials"
-            :key="s.label"
-            :href="s.href"
+            v-for="social in contact.socials"
+            :key="social.label"
+            :href="social.href"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             class="inline-flex items-center gap-1.5
-                   hover:text-primary transition-colors"
+                   transition-colors duration-200
+                   hover:text-primary"
           >
-            <IconSocial :name="s.icon" />
-            {{ s.label }}
+            <IconSocial :name="social.icon" />
+            {{ social.label }}
           </a>
         </div>
-
       </div>
     </div>
   </section>

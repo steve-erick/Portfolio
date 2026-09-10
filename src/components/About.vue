@@ -4,76 +4,100 @@ import { motion } from 'motion-v'
 defineProps({
   intro: {
     type: Object,
-    required: true
+    required: true,
   },
   timeline: {
     type: Array,
-    required: true
+    required: true,
   },
 })
 </script>
 
 <template>
   <motion.section
-  :initial="{ opacity: 0, x: -40 }"
-  :whileInView="{ opacity: 1, x: 0 }"
-  :transition="{ duration: 0.6 }"
-  :viewport="{ once: true }"
-  id="about"
-  class="py-12"
->
+    id="about"
+    :initial="{ opacity: 0, x: -40 }"
+    :whileInView="{ opacity: 1, x: 0 }"
+    :transition="{ duration: 0.6 }"
+    :viewport="{ once: true, amount: 0.1 }"
+    class="w-full overflow-x-clip
+           px-4 py-16
+           sm:px-6 sm:py-20
+           lg:px-8"
+  >
     <div
-    
-      class="w-[90%] mx-auto grid grid-cols-1 min-[860px]:grid-cols-[0.9fr_1.1fr] gap-10 min-[860px]:gap-16"
+      class="mx-auto grid w-full max-w-7xl
+             grid-cols-1 gap-12
+             min-[860px]:grid-cols-[0.9fr_1.1fr]
+             min-[860px]:gap-16"
     >
-
-      <!-- Intro -->
-      <div>
-        <h2 class="text-primary text-[32px] font-medium mb-5">
+      <!-- Introdução -->
+      <div class="w-full">
+        <h2
+          class="mb-5 text-3xl font-medium
+                 leading-tight text-primary
+                 sm:text-4xl"
+        >
           {{ intro.title }}
         </h2>
 
         <p
-          v-for="(paragraph, i) in intro.paragraphs"
-          :key="i"
-          class="text-secondary text-[15.5px] leading-[1.7] mb-[18px] last:mb-0"
+          v-for="(paragraph, index) in intro.paragraphs"
+          :key="index"
+          class="mb-4 text-sm leading-relaxed
+                 text-secondary last:mb-0
+                 sm:text-[15.5px] sm:leading-[1.7]"
         >
           {{ paragraph }}
         </p>
       </div>
 
       <!-- Timeline -->
-      <ol class="list-none m-0 pl-6 border-l border-secondary/20">
-
+      <ol
+        class="m-0 list-none
+               border-l border-secondary/20
+               pl-5 sm:pl-7"
+      >
         <li
           v-for="item in timeline"
-          :key="item.role"
-          class="relative pb-9 last:pb-0"
+          :key="`${item.role}-${item.period}`"
+          class="relative pb-8 last:pb-0 sm:pb-9"
         >
-
+          <!-- Marcador -->
           <span
             aria-hidden="true"
-            class="absolute -left-[29px] top-1 w-[9px] h-[9px] rounded-full bg-background border-2 border-button"
-          ></span>
+            class="absolute -left-[25px] top-1
+                   h-[9px] w-[9px] rounded-full
+                   border-2 border-button bg-background
+                   sm:-left-[33px]"
+          />
 
-          <p class="text-button text-[13px] font-mono mb-1.5">
+          <!-- Período -->
+          <p
+            class="mb-1.5 font-mono text-xs
+                   text-button sm:text-[13px]"
+          >
             {{ item.period }}
           </p>
 
-          <h3 class="text-primary text-[17px] font-medium mb-2">
+          <!-- Cargo -->
+          <h3
+            class="mb-2 text-base font-medium
+                   leading-snug text-primary
+                   sm:text-[17px]"
+          >
             {{ item.role }}
           </h3>
 
-          <p class="text-secondary text-[14.5px] leading-[1.6]">
+          <!-- Descrição -->
+          <p
+            class="text-sm leading-relaxed text-secondary
+                   sm:text-[14.5px] sm:leading-[1.6]"
+          >
             {{ item.description }}
           </p>
-
         </li>
-
       </ol>
-
     </div>
-
-
   </motion.section>
 </template>

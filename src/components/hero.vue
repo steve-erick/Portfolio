@@ -1,5 +1,5 @@
 <script setup>
-import { Download, MoveRight, MapPin } from 'lucide-vue-next';
+import { Download, MoveRight, MapPin } from 'lucide-vue-next'
 
 defineProps({
   hero: {
@@ -10,46 +10,74 @@ defineProps({
 </script>
 
 <template>
-    <div class="flex flex-col items-center gap-3 w-full">
+  <section
+  class="flex min-h-[100svh] w-full flex-col
+         items-center justify-center gap-5
+         overflow-x-clip
+         px-4 py-2 text-center
+         sm:px-6 lg:px-8"
+>
+    <!-- Imagem -->
+    <img
+  src="/images/logo.png"
+  alt="Ilustração de Erick Castro"
+  class="h-auto w-52 max-w-full
+         sm:w-64 md:w-2/6   "
+/>
 
-        <img
-            class="w-2/3 md:w-2/6"
-            src="/images/logo.png"
-            alt="Logo"
-        />
+    <!-- Nome -->
+    <h1
+      class="max-w-full text-4xl font-bold
+             leading-tight text-primary
+             sm:text-5xl md:text-6xl lg:text-7xl"
+    >
+      Erick Castro
+    </h1>
 
-        <h1 class="text-primary text-5xl md:text-7xl font-bold">
-            Erick Castro
-        </h1>
+    <!-- Botões -->
+    <div
+      class="flex w-full max-w-md flex-col
+             items-center justify-center gap-3
+             sm:max-w-none sm:flex-row"
+    >
+      <a
+        href="#work"
+        class="inline-flex w-full items-center justify-center
+               gap-2 rounded-2xl bg-button
+               px-6 py-3 font-medium text-slate-900
+               transition-all duration-200
+               hover:-translate-y-0.5
+               hover:bg-emerald-300
+               sm:w-auto"
+      >
+        {{ hero.primaryCta.label }}
+        <MoveRight class="size-5" />
+      </a>
 
-        <div class="flex items-center justify-center flex-row gap-3 w-full px-4">
-
-            <a
-                href="#work"
-                class="inline-flex items-center gap-2 rounded-2xl bg-button px-6 py-3 font-medium text-slate-900 transition-colors hover:bg-emerald-300"
-            >
-                {{hero.primaryCta.label}}
-                <MoveRight />
-            </a>
-
-            <a
-                :href="hero.secondaryCta.href"
-                :download="hero.secondaryCta.href"
-                class="inline-flex items-center gap-2 rounded-2xl px-6 py-3 outline text-primary font-medium transition-colors hover:bg-emerald-300"
-            >
-                <Download />
-                {{hero.secondaryCta.label}}
-
-            </a>
-
-        </div>
-
-        <div class="flex flex-row">
-            <p class="text-secondary text-[15px] gap-1 inline-flex items-center">
-                <MapPin class="size-5" />
-                {{hero.location}}
-            </p>
-        </div>
-
+      <a
+        :href="hero.secondaryCta.href"
+        download
+        class="inline-flex w-full items-center justify-center
+               gap-2 rounded-2xl border border-primary
+               px-6 py-3 font-medium text-primary
+               transition-all duration-200
+               hover:-translate-y-0.5
+               hover:bg-primary hover:text-background
+               sm:w-auto"
+      >
+        <Download class="size-5" />
+        {{ hero.secondaryCta.label }}
+      </a>
     </div>
+
+    <!-- Localização -->
+    <p
+      class="inline-flex items-center justify-center
+             gap-1.5 text-sm text-secondary
+             sm:text-[15px]"
+    >
+      <MapPin class="size-4 shrink-0 sm:size-5" />
+      {{ hero.location }}
+    </p>
+  </section>
 </template>

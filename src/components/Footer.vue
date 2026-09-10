@@ -8,14 +8,23 @@ defineProps({
 </script>
 
 <template>
-  <footer class="py-7">
+  <footer class="w-full border-t border-border py-6 sm:py-7">
     <div
-      class="w-[90vw] mx-auto flex justify-between
-             font-mono text-[12.5px] text-secondary/60
-             max-[560px]:flex-col max-[560px]:gap-2"
+      class="mx-auto flex w-full max-w-7xl
+             flex-col items-center justify-center gap-2
+             px-4 text-center font-mono
+             text-xs text-secondary/60
+             sm:flex-row sm:justify-between
+             sm:px-6 sm:text-left
+             lg:px-8"
     >
-      <span>{{ footer.copyright }}</span>
-      <span>{{ footer.builtWith }}</span>
+      <span>
+        {{ footer.copyright }}
+      </span>
+
+      <span>
+        {{ footer.builtWith }}
+      </span>
     </div>
   </footer>
 </template>
